@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>С Днём социолога, мама! 💖</title>
+  <meta name="theme-color" content="#160b29">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Manrope:wght@400;500;700&family=Playfair+Display:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="locked">
+
+  <!-- Фон и эффекты -->
+  <div class="bg" aria-hidden="true"><i></i><i></i><i></i></div>
+  <canvas id="fx" aria-hidden="true"></canvas>
+
+  <!-- Стартовый экран (нужен, чтобы браузер разрешил музыку) -->
+  <section id="gate">
+    <div class="gate-card">
+      <div class="gate-icon">💌</div>
+      <p class="eyebrow">Для самого дорогого человека</p>
+      <h1 class="gate-title">Тебя ждёт сюрприз</h1>
+      <button id="openBtn" class="btn">Открыть поздравление</button>
+    </div>
+  </section>
+
+  <main id="site" hidden>
+
+    <!-- 1. Главный экран -->
+    <section class="hero">
+      <p class="eyebrow reveal">14 ноября · День социолога</p>
+      <h1 class="hero-title reveal">Мама,<br><span class="shine">с Днём социолога!</span></h1>
+      <p class="hero-name reveal">Гульмира Токшалыковна</p>
+      <p class="typed reveal"><span id="typed"></span><span class="caret">|</span></p>
+      <a class="scroll-down" href="#about" aria-label="Листать вниз">↓</a>
+    </section>
+
+    <!-- 2. О маме -->
+    <section id="about" class="section">
+      <p class="eyebrow reveal">Социолог по призванию</p>
+      <h2 class="reveal">Ты видишь людей там, где другие видят цифры</h2>
+      <p class="lead reveal">
+        Много лет ты изучаешь общество, задаёшь важные вопросы и ищешь на них честные ответы.
+        За каждой таблицей и каждым графиком ты всегда видела живого человека.
+        Ты умеешь слушать, замечать главное и говорить правду так, что её хочется услышать.
+        Это редкий дар, и я горжусь, что он у моей мамы.
+      </p>
+
+      <div class="stats">
+        <div class="stat reveal">
+          <b><span class="count" data-to="25">25</span>+</b>
+          <span>лет в социологических исследованиях</span>
+        </div>
+        <div class="stat reveal">
+          <b><span class="count" data-to="2001">2021</span></b>
+          <span>год, когда ты возглавила Центр «Стратегия»</span>
+        </div>
+        <div class="stat reveal">
+          <b>КазНУ</b>
+          <span>учишь будущих исследователей в университете аль-Фараби</span>
+        </div>
+        <div class="stat reveal">
+          <b>∞</b>
+          <span>любви и благодарности от твоей дочери</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Фотографии -->
+    <section class="section">
+      <p class="eyebrow reveal">Наши моменты</p>
+      <h2 class="reveal">Самые тёплые кадры</h2>
+      <div class="gallery">
+        <figure class="polaroid reveal" style="--r:-3deg" data-base="photo1" data-label="photo1">
+          <div class="frame"><img alt="Мама, фото 1" loading="lazy"></div>
+          <figcaption>Крутышка</figcaption>
+        </figure>
+        <figure class="polaroid reveal" style="--r:2.5deg" data-base="photo2" data-label="photo2">
+          <div class="frame"><img alt="Мама, фото 2" loading="lazy"></div>
+          <figcaption>Мудрость и свет</figcaption>
+        </figure>
+        <figure class="polaroid reveal" style="--r:-1.5deg" data-base="photo3" data-label="photo3">
+          <div class="frame"><img alt="Мама, фото 3" loading="lazy"></div>
+          <figcaption>Мама на высоте</figcaption>
+        </figure>
+        <figure class="polaroid reveal" style="--r:3deg" data-base="photo4" data-label="photo4">
+          <div class="frame"><img alt="Мама, фото 4" loading="lazy"></div>
+          <figcaption>Тёплые мгновения</figcaption>
+        </figure>
+        <figure class="polaroid reveal" style="--r:-2.5deg" data-base="photo5" data-label="photo5">
+          <div class="frame"><img alt="Мама, фото 5" loading="lazy"></div>
+          <figcaption>Счастье</figcaption>
+        </figure>
+        <figure class="polaroid reveal" style="--r:1.8deg" data-base="photo6" data-label="photo6">
+          <div class="frame"><img alt="Мама, фото 6" loading="lazy"></div>
+          <figcaption>Вместе навсегда</figcaption>
+        </figure>
+      </div>
+      <p class="small reveal">Нажми на фото, чтобы рассмотреть поближе ✨</p>
+    </section>
+
+    <!-- 4. Пожелания -->
+    <section class="section">
+      <p class="eyebrow reveal">От всего сердца</p>
+      <h2 class="reveal">Я желаю тебе</h2>
+      <div class="wishes">
+        <article class="wish reveal"><h3>Вдохновения</h3><p>Пусть каждое новое исследование открывает что-то удивительное.</p></article>
+        <article class="wish reveal"><h3>Здоровья</h3><p>Крепкого, как твой характер, и бодрости на каждый день.</p></article>
+        <article class="wish reveal"><h3>Благодарных учеников</h3><p>Чтобы твои студенты слушали, горели наукой и гордились тобой.</p></article>
+        <article class="wish reveal"><h3>Времени на себя</h3><p>На тишину, любимые книги и чашку чая без дедлайнов.</p></article>
+        <article class="wish reveal"><h3>Тепла</h3><p>Чтобы дома всегда ждали, обнимали и понимали без слов.</p></article>
+        <article class="wish reveal"><h3>Только плюс</h3><p>Чтобы в твоей жизни была исключительно положительная динамика.</p></article>
+      </div>
+    </section>
+
+    <!-- 5. Мини-опрос -->
+    <section class="section">
+      <p class="eyebrow reveal">Социологический опрос</p>
+      <h2 class="reveal">Вопрос</h2>
+      <div class="poll reveal" id="poll">
+        <p class="poll-q">Кто лучший социолог Казахстана по мнению респондента?</p>
+        <div class="poll-options">
+          <button class="opt" type="button">Мама</button>
+          <button class="opt" type="button">Конечно, мама</button>
+          <button class="opt" type="button">Однозначно мама</button>
+          <button class="opt" type="button">Затрудняюсь ответить</button>
+        </div>
+        <div class="poll-result" hidden>
+          <div class="bar"><i></i><span>Мама — 100%</span></div>
+          <p>Выборка: 1 дочь. Погрешность: 0%. Репрезентативность: на все 100% сердцем ❤️</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Финал -->
+    <section class="finale">
+      <div class="big-heart" id="bigHeart" role="button" tabindex="0" aria-label="Устроить салют">❤</div>
+      <h2 class="reveal">Спасибо!</h2>
+      <p class="lead reveal">
+        С Днём социолога!<br>
+        Люблю тебя больше, чем любая статистика способна показать.
+      </p>
+      <p class="sign reveal">от Далиды 💖</p>
+      <button id="fireBtn" class="btn reveal" type="button">Ещё сюрприз ✨</button>
+    </section>
+  </main>
+
+  <!-- Музыка -->
+  <audio id="bgm" loop preload="auto">
+    <source src="assets/music.mp3" type="audio/mpeg">
+  </audio>
+  <button id="musicBtn" class="music" type="button" aria-label="Музыка вкл/выкл" hidden>
+    <span class="eq"><i></i><i></i><i></i></span>
+  </button>
+
+  <!-- Просмотр фото -->
+  <div id="lightbox" hidden>
+    <button class="lb-close" aria-label="Закрыть">×</button>
+    <button class="lb-prev" aria-label="Назад">‹</button>
+    <figure>
+      <img id="lbImg" alt="">
+      <figcaption id="lbCap"></figcaption>
+    </figure>
+    <button class="lb-next" aria-label="Вперёд">›</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
